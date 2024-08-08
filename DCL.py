@@ -1,5 +1,5 @@
 # This is DCL algorithm
-
+# DCL owner: https://github.com/AminCoder
 
 class DCL:
     MAX_A_RATIO = 999999

@@ -1,10 +1,10 @@
 from functions import database_md5, hash_encryption
 import itertools
 
-letters = 'abcdefghijklmnopqrstuvwxyz0123456789'
+letters = '1234567890'
 
 all_combinations = []
-for r in range(3, 4):
+for r in range(3, 7):
     combinations = itertools.product(letters, repeat=r)
     all_combinations.extend([''.join(combination) for combination in combinations])
 

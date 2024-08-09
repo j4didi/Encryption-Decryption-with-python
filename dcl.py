@@ -1,4 +1,4 @@
-# This is DCL algorithm
+# DCL algorithm
 # DCL owner: https://github.com/AminCoder
 
 class DCL:

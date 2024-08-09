@@ -29,8 +29,12 @@ def main():
                             get_text = input("Enter the text you want to encrypt: \n")
                             result = hash_encryption(get_text)
                             print(f'Your hash: {result}')
-                            database_md5(get_text, result)
-                            press_to_continue()
+                            try:
+                                database_md5(get_text, result)
+                                press_to_continue()
+                            except Exception as e:
+                                print(e)
+                                press_to_continue()
                             break
                         case 2:
                             dcl_encryption()
@@ -45,14 +49,20 @@ def main():
             case 2:
                 while True:
                     get_algorithm = get_input_user(f'{encryption_items}Enter number of algorithm: ')
-                    if get_algorithm == 1:
-                        ctext = 'example_ciphertext'
-                        ptext = get_ptext(ctext)
+                    match get_algorithm:
+                        case 1:
+                            ctext = input('Enter the hash:')
+                            ptext = get_ptext(ctext)
 
-                        if ptext:
-                            print(f'The corresponding plaintext is: {ptext}')
-                        else:
-                            print('Plaintext not found for the given ciphertext.')
+                            if ptext:
+                                print(f'The plaintext is: {ptext}')
+                                press_to_continue()
+                            else:
+                                print('Plaintext not found for the given MD5.')
+                                press_to_continue()
+                        case _:
+                            print('We can only decrypt MD5 for now! please enter 1 :)')
+                            press_to_continue()
 
             case 3:
                 exit(0)

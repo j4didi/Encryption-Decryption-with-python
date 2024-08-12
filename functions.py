@@ -46,7 +46,22 @@ def rsa_encryption():
     return print(f"Original: {message}\nEncrypted: {enc_message}\nPublic Key: {public_key}\nPrivate Key: {private_key}")
 
 
-def match_case_get_algorithm(get_algorithm):
+def match_case_get_algorithm_case1(get_algorithm):
+    match get_algorithm:
+        case 1:
+            get_text = input("Enter the text you want to encrypt: \n")
+            result = hash_encryption(get_text)
+            print(f'Your hash: {result}')
+            press_to_continue()
+        case 2:
+            dcl_encryption()
+
+        case 3:
+            rsa_encryption()
+            press_to_continue()
+        case _:
+            print('Invalid number. try again.')
+def match_case_get_algorithm_case2(get_algorithm):
     match get_algorithm:
         case 1:
             ctext = input('Enter the hash:')

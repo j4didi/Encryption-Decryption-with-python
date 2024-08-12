@@ -22,34 +22,11 @@ def main():
         get_user_item = get_input_user(f'{show_list_items}Enter number of your choice: ')
         match get_user_item:
             case 1:
-                while True:
-                    get_algorithm = get_input_user(f'{encryption_items}Enter number of algorithm: ')
-                    match get_algorithm:
-                        case 1:
-                            get_text = input("Enter the text you want to encrypt: \n")
-                            result = hash_encryption(get_text)
-                            print(f'Your hash: {result}')
-                            try:
-                                database_md5(get_text, result)
-                                press_to_continue()
-                            except Exception as e:
-                                print(e)
-                                press_to_continue()
-                            break
-                        case 2:
-                            dcl_encryption()
-                            break
-
-                        case 3:
-                            rsa_encryption()
-                            press_to_continue()
-                            break
-                        case _:
-                            print('Invalid number. try again.')
+                get_algorithm = get_input_user(f'{encryption_items}Enter number of algorithm: ')
+                match_case_get_algorithm_case1(get_algorithm)
             case 2:
-                while True:
-                    get_algorithm = get_input_user(f'{encryption_items}Enter number of algorithm: ')
-                    match_case_get_algorithm(get_algorithm)
+                get_algorithm = get_input_user(f'{encryption_items}Enter number of algorithm: ')
+                match_case_get_algorithm_case2(get_algorithm)
             case 3:
                 exit(0)
 

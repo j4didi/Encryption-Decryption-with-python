@@ -20,7 +20,7 @@ decryption_items = """Which algorithm would you like to decrypt?
 def main():
     while True:
         get_user_item = get_input_user(f'{show_list_items}Enter number of your choice: ')
-        match get_user_item: #We have 2 match cases in functions
+        match get_user_item:
             case 1:
                 get_algorithm = get_input_user(f'{encryption_items}Enter number of algorithm: ')
                 match_case_get_algorithm_case1(get_algorithm)

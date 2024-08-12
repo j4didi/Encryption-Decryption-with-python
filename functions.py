@@ -63,15 +63,15 @@ def hash_encryption(text):
 
 
 def dcl_encryption():
-    from DCL import DCL
+    from dcl import DCL
     key = input('Enter the key: \n')
     alpha = get_alpha_user('Enter the alpha between 0-9: \n')
-    if alpha != 0 or 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9:
+    if alpha < 0 or alpha > 9:  # != 0 or 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9:
         print('alpha must be between 0 and 9')
     plaintext = input("Enter the text you want to encrypt: \n")
     dcl_instance = DCL(key, alpha)
     result = dcl_instance.generate(plaintext)
-    print(result)
+    print(f'Your encrypted text with DCL algorithm: {result}')
     press_to_continue()
 
 
@@ -106,5 +106,7 @@ def get_ptext(ctext):
         return result[0]
     else:
         return None
+
+
 def press_to_continue():
     input('Press Enter to continue...')

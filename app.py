@@ -49,21 +49,7 @@ def main():
             case 2:
                 while True:
                     get_algorithm = get_input_user(f'{encryption_items}Enter number of algorithm: ')
-                    match get_algorithm:
-                        case 1:
-                            ctext = input('Enter the hash:')
-                            ptext = get_ptext(ctext)
-
-                            if ptext:
-                                print(f'The plaintext is: {ptext}')
-                                press_to_continue()
-                            else:
-                                print('Plaintext not found for the given MD5.')
-                                press_to_continue()
-                        case _:
-                            print('We can only decrypt MD5 for now! please enter 1 :)')
-                            press_to_continue()
-
+                    match_case_get_algorithm(get_algorithm)
             case 3:
                 exit(0)
 

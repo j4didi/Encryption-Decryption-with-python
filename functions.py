@@ -46,6 +46,24 @@ def rsa_encryption():
     return print(f"Original: {message}\nEncrypted: {enc_message}\nPublic Key: {public_key}\nPrivate Key: {private_key}")
 
 
+
+def match_case_get_algorithm(get_algorithm):
+    match get_algorithm:
+        case 1:
+            ctext = input('Enter the hash:')
+            ptext = get_ptext(ctext)
+
+            if ptext:
+                print(f'The plaintext is: {ptext}')
+                press_to_continue()
+            else:
+                print('Plaintext not found for the given MD5.')
+                press_to_continue()
+        case _:
+            print('We can only decrypt MD5 for now! please enter 1 :)')
+            press_to_continue()
+
+
 def get_alpha_user(prompt):
     while True:
         try:

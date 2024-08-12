@@ -23,7 +23,7 @@ def main():
         match get_user_item:
             case 1:
                 get_algorithm = get_input_user(f'{encryption_items}Enter number of algorithm: ')
-                match_case_get_algorithm_case1(get_algorithm)
+                match_case_get_algorithm_case1(get_algorithm) #have a match case in function
             case 2:
                 get_algorithm = get_input_user(f'{encryption_items}Enter number of algorithm: ')
                 match_case_get_algorithm_case2(get_algorithm)

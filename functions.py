@@ -46,7 +46,6 @@ def rsa_encryption():
     return print(f"Original: {message}\nEncrypted: {enc_message}\nPublic Key: {public_key}\nPrivate Key: {private_key}")
 
 
-
 def match_case_get_algorithm(get_algorithm):
     match get_algorithm:
         case 1:

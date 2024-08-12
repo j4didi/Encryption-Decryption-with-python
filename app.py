@@ -1,4 +1,3 @@
-# app.py
 from functions import *
 
 
